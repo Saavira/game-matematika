@@ -1,0 +1,63 @@
+/* Tambahan gaya khusus untuk halaman permainan */
+.game-page {
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    min-height: 100vh;
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Tambahin efek salju */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.ibb.co/Pm6SpDW/snow.gif'); /* Gambar salju transparan */
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  #question, #timer, #score, #bonus-box, .options, #next-btn {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Tombol pilihan */
+  .option-btn {
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  .option-btn:hover {
+    background-color: #ffeb3b;
+  }
+  
+  /* Bonus box style */
+  #bonus-box {
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #ffe600;
+    animation: pop 1s ease;
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+  }
