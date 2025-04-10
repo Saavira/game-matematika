@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Permainan Matematika</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-screen">
+  <div class="container">
+    <h1>Soal Persamaan Kuadrat</h1>
+
+    <div class="question" id="question">Soal akan tampil di sini</div>
+
+    <div class="options" id="options">
+      <!-- Pilihan jawaban muncul dari JS -->
+    </div>
+
+    <div class="timer" id="timer">Waktu: 5:00</div>
+
+    <div class="bonus-popup" id="bonus-popup" style="display: none;">
+      <!-- Popup bonus Speed 2x / 3x dari JS -->
+    </div>
+
+    <div class="score-board" id="score">Skor: 0</div>
+
+    <div class="navigation">
+      <button id="next-btn">Soal Selanjutnya</button>
+    </div>
+  </div>
+
+  <!-- Audio feedback -->
+  <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
