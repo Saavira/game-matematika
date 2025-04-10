@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Persamaan Kuadrat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cover-screen">
+  <div class="cover-container">
+    <h1>Selamat Datang!</h1>
+    <p>Ayo uji kemampuanmu dalam persamaan kuadrat!</p>
+    <button onclick="mulaiGame()">Mulai Game</button>
+  </div>
+
+  <!-- Tambahan efek salju -->
+  <div id="snowfall"></div>
+
+  <script>
+    function mulaiGame() {
+      window.location.href = "game.html";
+    }
+
+    // Efek salju
+    const snowContainer = document.getElementById("snowfall");
+    for (let i = 0; i < 100; i++) {
+      const snow = document.createElement("div");
+      snow.className = "snow";
+      snow.style.left = Math.random() * 100 + "vw";
+      snow.style.animationDuration = 2 + Math.random() * 3 + "s";
+      snow.style.opacity = Math.random();
+      snowContainer.appendChild(snow);
+    }
+  </script>
+</body>
+</html>
